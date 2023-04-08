@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <p>
+  
       nroh l dossier li rani hab ntal3o f web w nakteb : <br />
       facultatif : {
       <li>git config --global user.name "John Doe"</li>
@@ -20,25 +20,116 @@
       </li>
 
       <hr> 
+
       <h2>etapes :</h2>
       <img src="etapes.png" alt="">
+
    <p>
         <h2>Le Working directory </h2>
-    Cette zone correspond au dossier du projet sur votre ordinateur.
+        Cette zone correspond au dossier du projet sur votre ordinateur.
 
-    Souvenez-vous, dans la partie précédente nous avons initialisé le dépôt “PremierProjet”. Eh bien ce dépôt, c’est la zone bleue du schéma.
+        Souvenez-vous, dans la partie précédente nous avons initialisé le dépôt “PremierProjet”. Eh bien ce dépôt, c’est la zone bleue du schéma.
 
-    <h2> Le Stage ou index </h2>
-    Cette zone est un intermédiaire entre le working directory et le repository. Elle représente tous les fichiers modifiés que vous souhaitez voir apparaître dans votre prochaine version de code.
+        <h2> Le Stage ou index </h2>
+        Cette zone est un intermédiaire entre le working directory et le repository. Elle représente tous les fichiers modifiés que vous souhaitez voir apparaître dans votre prochaine version de code. ( git add . )
 
-    <h2> Le Repository </h2>
-    Lorsque l’on crée de nouvelles versions d’un projet (vous vous souvenez, les 3 versions différentes du gâteau ?), c’est dans cette zone qu’elles sont stockées.
-<br>
-    Ces 3 zones sont donc présentes dans votre ordinateur, en local.
-</p>   
-    <li style="color:red" >   2) git
-    
+        <h2> Le Repository </h2>
+        Lorsque l’on crée de nouvelles versions d’un projet  c’est dans cette zone qu’elles sont stockées.
+        <br>
+        Ces 3 zones sont donc présentes dans votre ordinateur, en local.
+    </p>   
+
+     <li style="color:red" >   
+        2) git add fichier.html / or  git add . 
      </li>
-    </p>
+
+     le commit c'est la sauvgarde : 
+     <li style="color:red" >   
+        3)  git commit -m “Ajout des fichiers html et css de base”
+     </li>
+  <h2>  Envoyez votre commit sur le dépôt distant avec la commande git push </h2>
+Créer une version de votre projet, c’est super, mais il faut désormais passer votre commit du repository à votre dépôt distant. On dit qu’il faut “pusher” votre commit.
+
+<h1> Votre premier push va vous demander un peu de configuration : </h1>
+
+Pour commencer, vous allez devoir “reliez” votre dépôt local au dépôt distant que vous avez créé sur GitHub précédemment. Pour cela :
+
+Allez sur GitHub.
+
+Cliquez sur la petite image en haut à droite. 
+
+Cliquez sur “your repositories”.
+
+Cliquez sur le repository créé dans la première partie du cours, “OpenclassroomsProject”.
+
+    <li style="color:red"  >
+
+        4)  git remote add origin https://github.com/EtudiantOC/OpenclassroomsProject.git
+
+   </li>
+                Vous l’aurez compris, le lien à saisir est le lien que vous venez de copier.
+
+        Ensuite, tapez la commande :
+    <li style="color:red"  >
+
+
+        5)  git branch -M main
+
+    </li>
+            Ça y est ! Vous avez relié le dépôt local au dépôt distant. 
+        Vous pouvez donc envoyer des commits du repository vers le dépôt distant GitHub en utilisant la commande suivante :
+<li style="color:red" >
+
+        6)  git push -u origin main
+     
+</li>
+   Bravo, la version du projet est maintenant stockée dans le cloud !
+
+<hr>
+
+<h1>  push des  modifications :   </h1>
+
+
+
+
+
+Reprenez le fichier HTML créé. Disons que vous allez modifier le titre “Un super titre” en “Un super titre !”.
+
+Pour créer une version du projet avec le fichier HTML à jour et l’envoyer sur le dépôt distant GitHub, vous allez :
+
+Indexer le fichier HTML modifié grâce à la commande : 
+
+<li style="color:red" >
+
+        7)  git add index.html
+     
+</li>
+
+
+Créer une nouvelle version grâce à la commande :
+
+<li style="color:red" >
+
+        8) git commit -m “Modification du fichier html”
+     
+</li>
+
+
+Envoyer la nouvelle version sur le dépôt distant grâce à la commande :
+<li style="color:red" >
+
+        9) git push origin main
+     
+</li>
+
+
+Et voilà ! Vous savez maintenant utiliser les commandes git add, git commit et   git push . Vous serez amené à les utiliser régulièrement. Je vous conseille donc de vous entraîner, et pourquoi pas, de regarder régulièrement le schéma ci-dessous pour mémoriser les commandes de base.
+
+
+
+
+
+
+
   </body>
 </html>
